@@ -9,13 +9,19 @@
 import UIKit
 
 class MyTimer: NSObject {
+    
+    static let kTickDidRecognizedNotification = NSNotification.Name(rawValue: "kTickDidRecognizedNotification")
 
     func startTick(interval: TimeInterval) {
         Timer.scheduledTimer(timeInterval: interval, target: self, selector: #selector(foo(timer:)), userInfo: nil, repeats: false)
     }
     
+    private var tickCount = 0
+    
     @objc private func foo(timer: Timer) {
 //        timer.invalidate()
         print("tick")
+        tickCount += 1
+        NotificationCenter.default.post(name: MyTimer.kTickDidRecognizedNotification, object: self, userInfo: ["tickCount": tickCount])
     }
 }
