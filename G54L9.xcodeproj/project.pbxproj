@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A9641FEBA81CAC1DA2CAAAA /* Pods_G54L9.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ED09E7B38DB51E9BA7CB50B /* Pods_G54L9.framework */; };
+		4C135BDB1ED4B7A4000D78CB /* AllTasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C135BDA1ED4B7A4000D78CB /* AllTasksTableViewController.swift */; };
 		4CEABEB81ED4A30900C3563F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEABEB71ED4A30900C3563F /* AppDelegate.swift */; };
 		4CEABEBA1ED4A30900C3563F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEABEB91ED4A30900C3563F /* ViewController.swift */; };
 		4CEABEBD1ED4A30900C3563F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CEABEBB1ED4A30900C3563F /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C135BDA1ED4B7A4000D78CB /* AllTasksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllTasksTableViewController.swift; sourceTree = "<group>"; };
 		4CEABEB41ED4A30900C3563F /* G54L9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = G54L9.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CEABEB71ED4A30900C3563F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CEABEB91ED4A30900C3563F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				4CEABEBB1ED4A30900C3563F /* Main.storyboard */,
+				4C135BDA1ED4B7A4000D78CB /* AllTasksTableViewController.swift */,
 				4CEABECB1ED4A41700C3563F /* Model */,
 				4CEABECC1ED4A42F00C3563F /* View */,
 				4CEABECD1ED4A43B00C3563F /* Controller */,
@@ -241,6 +244,7 @@
 			files = (
 				4CEABECA1ED4A32000C3563F /* Timer.swift in Sources */,
 				4CEABEBA1ED4A30900C3563F /* ViewController.swift in Sources */,
+				4C135BDB1ED4B7A4000D78CB /* AllTasksTableViewController.swift in Sources */,
 				4CEABEB81ED4A30900C3563F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +413,7 @@
 				4CEABEC81ED4A30900C3563F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

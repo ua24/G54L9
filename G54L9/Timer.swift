@@ -10,7 +10,7 @@ import UIKit
 
 class MyTimer: NSObject {
     
-    static let kTickDidRecognizedNotification = NSNotification.Name(rawValue: "kTickDidRecognizedNotification")
+    static let kTickDidRecognizedNotification = Notification.Name(rawValue: "kTickDidRecognizedNotification")
 
     func startTick(interval: TimeInterval) {
         Timer.scheduledTimer(timeInterval: interval,
