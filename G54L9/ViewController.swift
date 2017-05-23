@@ -15,11 +15,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(bar(notificaton:)),
+                                               name: MyTimer.kTickDidRecognizedNotification,
+                                               object: myTimer)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         myTimer.startTick(interval: 3)
+    }
+    
+    func bar(notificaton: Notification) {
+        print("notificaton recieved")
     }
 
 }

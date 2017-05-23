@@ -22,6 +22,8 @@ class MyTimer: NSObject {
 //        timer.invalidate()
         print("tick")
         tickCount += 1
-        NotificationCenter.default.post(name: MyTimer.kTickDidRecognizedNotification, object: self, userInfo: ["tickCount": tickCount])
+        NotificationCenter.default.post(name: MyTimer.kTickDidRecognizedNotification,
+                                        object: self,
+                                        userInfo: ["tickCount": tickCount])
     }
 }
