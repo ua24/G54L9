@@ -26,8 +26,11 @@ class ViewController: UIViewController {
     }
     
     func bar(notificaton: Notification) {
-        print("notificaton recieved")
+        print(notificaton.userInfo)
+        print(notificaton.object as! MyTimer)
+//        print("notificaton recieved")
     }
+    
 
 }
 
