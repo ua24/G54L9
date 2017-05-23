@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A9641FEBA81CAC1DA2CAAAA /* Pods_G54L9.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ED09E7B38DB51E9BA7CB50B /* Pods_G54L9.framework */; };
 		4CEABEB81ED4A30900C3563F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEABEB71ED4A30900C3563F /* AppDelegate.swift */; };
 		4CEABEBA1ED4A30900C3563F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEABEB91ED4A30900C3563F /* ViewController.swift */; };
 		4CEABEBD1ED4A30900C3563F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CEABEBB1ED4A30900C3563F /* Main.storyboard */; };
@@ -24,6 +25,9 @@
 		4CEABEC11ED4A30900C3563F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4CEABEC31ED4A30900C3563F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CEABEC91ED4A32000C3563F /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		8ED09E7B38DB51E9BA7CB50B /* Pods_G54L9.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_G54L9.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1A4DB0210EFB92DD0DBFB13 /* Pods-G54L9.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-G54L9.debug.xcconfig"; path = "Pods/Target Support Files/Pods-G54L9/Pods-G54L9.debug.xcconfig"; sourceTree = "<group>"; };
+		DCACF6A3A676F36E94EE6B9B /* Pods-G54L9.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-G54L9.release.xcconfig"; path = "Pods/Target Support Files/Pods-G54L9/Pods-G54L9.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A9641FEBA81CAC1DA2CAAAA /* Pods_G54L9.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				4CEABEB61ED4A30900C3563F /* G54L9 */,
 				4CEABEB51ED4A30900C3563F /* Products */,
+				D6E02AAFC9F942048B5CC55B /* Pods */,
+				7BE102E483ECE2DD4B217B31 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +98,23 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		7BE102E483ECE2DD4B217B31 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8ED09E7B38DB51E9BA7CB50B /* Pods_G54L9.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D6E02AAFC9F942048B5CC55B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C1A4DB0210EFB92DD0DBFB13 /* Pods-G54L9.debug.xcconfig */,
+				DCACF6A3A676F36E94EE6B9B /* Pods-G54L9.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -98,9 +122,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4CEABEC61ED4A30900C3563F /* Build configuration list for PBXNativeTarget "G54L9" */;
 			buildPhases = (
+				4E2A3AE399EEF2ED9307ADA9 /* [CP] Check Pods Manifest.lock */,
 				4CEABEB01ED4A30900C3563F /* Sources */,
 				4CEABEB11ED4A30900C3563F /* Frameworks */,
 				4CEABEB21ED4A30900C3563F /* Resources */,
+				17BED7C9B84F8D3F26CCE388 /* [CP] Embed Pods Frameworks */,
+				8667EBAB2AB3C7AF876F5D2E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -158,6 +185,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		17BED7C9B84F8D3F26CCE388 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-G54L9/Pods-G54L9-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4E2A3AE399EEF2ED9307ADA9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8667EBAB2AB3C7AF876F5D2E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-G54L9/Pods-G54L9-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4CEABEB01ED4A30900C3563F /* Sources */ = {
@@ -289,6 +364,7 @@
 		};
 		4CEABEC71ED4A30900C3563F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1A4DB0210EFB92DD0DBFB13 /* Pods-G54L9.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 278RE9W4W7;
@@ -302,6 +378,7 @@
 		};
 		4CEABEC81ED4A30900C3563F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCACF6A3A676F36E94EE6B9B /* Pods-G54L9.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 278RE9W4W7;
