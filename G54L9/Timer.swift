@@ -11,10 +11,11 @@ import UIKit
 class MyTimer: NSObject {
 
     func startTick(interval: TimeInterval) {
-        Timer.scheduledTimer(timeInterval: interval, target: self, selector: #selector(foo(timer:)), userInfo: nil, repeats: true)
+        Timer.scheduledTimer(timeInterval: interval, target: self, selector: #selector(foo(timer:)), userInfo: nil, repeats: false)
     }
     
-    func foo(timer: Timer) {
+    @objc private func foo(timer: Timer) {
+//        timer.invalidate()
         print("tick")
     }
 }

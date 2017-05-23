@@ -9,17 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let myTimer = MyTimer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        myTimer.startTick(interval: 3)
     }
-
 
 }
 
