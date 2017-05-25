@@ -32,11 +32,13 @@ class AllTasksTableViewController: UITableViewController {
 //        let result = try! query.findObjects()
 //        query.whereKey("user", equalTo: PFUser.current()!)
         query.whereKey("createdAt", lessThan: Date.init(timeIntervalSinceNow: -3360))
+        query.fromPin()
 //        query.order(byAscending: "createdAt")
 //        query.limit = 200
 //        query.skip = 200
         query.findObjectsInBackground { (objects, error) in
             if let result = objects {
+                try! PFObject.pinAll(result)
                 self.tasks = result.map({ (obj) -> String in
                      var str = obj["descript"] as? String ?? "no task descrypt"
                     
