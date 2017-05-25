@@ -13,25 +13,10 @@ class AllTasksTableViewController: UITableViewController {
 
     var tasks = [String]()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        let query = PFQuery(className: "Task")
-        let result = try! query.findObjects()
-//        print(result.count)
-//        if let descriptionOfTask = result.first!["descript"] as? String {
-//            print(descriptionOfTask)
-//        }
-//        let numbers = [1, 2, 3]
-//        print(numbers)
-//        let stringNumbers = numbers.map { (number) -> String in
-//            return number.description
-//        }
-//        print(stringNumbers)
-        tasks = result.map({ (obj) -> String in
-            return obj["descript"] as? String ?? "no task descrypt"
-        })
-        
+        reloadTasks()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -42,6 +27,21 @@ class AllTasksTableViewController: UITableViewController {
     }
 
 
+    func reloadTasks() {
+        let query = PFQuery(className: "Task")
+//        let result = try! query.findObjects()
+        query.findObjectsInBackground { (objects, error) in
+            if let result = objects {
+                self.tasks = result.map({ (obj) -> String in
+                    return obj["descript"] as? String ?? "no task descrypt"
+                })
+                self.tableView.reloadData()
+            }
+        }
+        
+        
+    }
+    
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
