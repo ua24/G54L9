@@ -33,6 +33,13 @@ class AllTasksTableViewController: UITableViewController {
         })
         
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if PFUser.current() == nil {
+            performSegue(withIdentifier: "showLogin", sender: self)
+        }
+    }
 
 
     // MARK: - Table view data source

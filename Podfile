@@ -6,5 +6,6 @@ target 'G54L9' do
   use_frameworks!
 
   # Pods for G54L9
+pod 'ParseUI'
 pod 'Parse'
 end
