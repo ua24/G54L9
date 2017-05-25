@@ -27,20 +27,23 @@ class AddTaskVC: UIViewController {
         task["descript"] = textView.text!
         task["user"] = PFUser.current()!
         
-        do {
-            try task.save()
+        task.saveInBackground { (success, error) in
+            if success {
+                self.cancelPressed(sender)
+            }
+            else {
+                self.showAlertWithErrorText((error?.localizedDescription)!)
+            }
         }
-        catch let error {
-            print(error)
-            showAlertWithErrorText(error.localizedDescription)
-            return
-        }
-        cancelPressed(sender)
-        
     }
     
     func showAlertWithErrorText(_ text: String) {
-        print(text)
+        let alert = UIAlertController(title: "Error occured", message: "It's not you fault.\n" + text, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Settings", style: .default, handler: { (act) in
+            UIApplication.shared.open(URL.init(string: UIApplicationOpenSettingsURLString)!, options: ["": ""], completionHandler: nil)
+        }))
+        present(alert, animated: true, completion: nil)
     }
 
 }
