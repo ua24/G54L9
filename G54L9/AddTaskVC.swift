@@ -46,4 +46,20 @@ class AddTaskVC: UIViewController {
         present(alert, animated: true, completion: nil)
     }
 
+    @IBAction func addPhoto(_ sender: UIBarButtonItem) {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        present(picker, animated: true, completion: nil)
+        
+    }
+}
+
+extension AddTaskVC: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        picker.dismiss(animated: true, completion: nil)
+        let img = info[UIImagePickerControllerOriginalImage] as! UIImage
+        view.backgroundColor = UIColor.init(patternImage: img)
+        print(info)
+        
+    }
 }
