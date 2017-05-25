@@ -30,10 +30,21 @@ class AllTasksTableViewController: UITableViewController {
     func reloadTasks() {
         let query = PFQuery(className: "Task")
 //        let result = try! query.findObjects()
+//        query.whereKey("user", equalTo: PFUser.current()!)
+        query.whereKey("createdAt", lessThan: Date.init(timeIntervalSinceNow: -3360))
+//        query.order(byAscending: "createdAt")
+//        query.limit = 200
+//        query.skip = 200
         query.findObjectsInBackground { (objects, error) in
             if let result = objects {
                 self.tasks = result.map({ (obj) -> String in
-                    return obj["descript"] as? String ?? "no task descrypt"
+                     var str = obj["descript"] as? String ?? "no task descrypt"
+                    
+//                    print(obj["user"] as? PFObject)
+                    if (obj["user"] as? PFObject ?? PFObject(className: "Task")).objectId == PFUser.current()!.objectId! {
+                        str = "#my:" + str
+                    }
+                    return str
                 })
                 self.tableView.reloadData()
             }
